@@ -1,0 +1,155 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(-45deg, #dfe9f3, #f0f2f5, #dfe9f3, #f0f2f5);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  margin: 0;
+  padding: 0;
+  color: #2f3542;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+header {
+  background: rgba(30, 60, 114, 0.95);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  backdrop-filter: blur(5px);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+nav {
+  margin-top: 20px;
+}
+
+nav a {
+  color: white;
+  margin: 0 18px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  position: relative;
+  padding-bottom: 5px;
+  transition: all 0.3s;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #ffd700;
+  transition: width 0.4s ease;
+}
+
+nav a:hover {
+  color: #ffd700;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+main {
+  max-width: 1000px;
+  margin: 50px auto;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 50px;
+  border-radius: 25px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 1s ease-in-out;
+  backdrop-filter: blur(5px);
+}
+
+main h2 {
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  color: #2a5298;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li {
+  background: #f5f7fa;
+  margin: 12px 0;
+  padding: 18px 25px;
+  border-left: 6px solid #1e90ff;
+  border-radius: 12px;
+  font-weight: 500;
+  transition: transform 0.3s ease, background-color 0.3s;
+  font-size: 1.1rem;
+}
+
+ul li:hover {
+  transform: translateX(10px);
+  background: #e0efff;
+  border-left-color: #0f78d4;
+}
+
+footer {
+  background: #1e3c72;
+  color: white;
+  text-align: center;
+  padding: 25px;
+  font-size: 1rem;
+  margin-top: 60px;
+  box-shadow: 0 -8px 15px rgba(0,0,0,0.1);
+}
+
+a {
+  color: #0077cc;
+  transition: color 0.3s;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #004f99;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    padding: 30px;
+  }
+
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  nav a {
+    display: block;
+    margin: 8px 0;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
